@@ -7,6 +7,19 @@ the construction of the breadcrumb is based on the couple action / controller.
 An annotation allows you to change the breadcrumb.
 Very flexible and easy to implement.
 
+Instal
+========================
+
+
+
+Using
+========================
+
+The breadcrumbs plugin is based on a MenuDefinitionService is provided by the application. So les't go create the service
+Run create-service MenuDefinitionService
+
+
+
 
 
 
