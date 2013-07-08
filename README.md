@@ -82,6 +82,7 @@ You can also define html character like `&gt; or &lt;` or `&yen;` if you want :)
 Thank to
 =========================
 
+[laurent guérin ](https://github.com/lguerin?source=cc)
 
 
 
