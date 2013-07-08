@@ -23,10 +23,8 @@ In MenuDefinitionService create a metho call `loadMenuDefinition`
 
 example 
 
-`
 
-
-class MenuDefinitionService  {
+` class MenuDefinitionService  {
 
   static transactional = false
 	
@@ -44,9 +42,7 @@ class MenuDefinitionService  {
   		menuThreeTwo << new MenuItem(name : "page-two.two", message:"pagetwo.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoTwo")
   		menuThree << menuThreeTwo
   }   
-}
-
-`
+}`
 
 You can define as many levels as you want !!!
 
