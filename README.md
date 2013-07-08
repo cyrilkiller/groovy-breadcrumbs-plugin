@@ -90,7 +90,7 @@ Adding the taglig in your layout
 Thank to
 =========================
 
-[laurent guerin ](https://github.com/lguerin?source=cc)
-
+[laurent guerin ](https://github.com/lguerin?source=cc) (my master :))
+ 
 
 
