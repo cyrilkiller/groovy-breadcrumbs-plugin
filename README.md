@@ -74,7 +74,9 @@ breadcrumbs.divider = "&gt;"
 ```
 
 You can define all `> < / - ...` divider that you want
-You can also define html character like `&gt;`
+You can also define html character like `&gt; or &lt;` or `&yen;` if want :)
+
+
 
 
 
