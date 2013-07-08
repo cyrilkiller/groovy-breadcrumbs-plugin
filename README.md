@@ -79,6 +79,9 @@ You can define all `> < / - ...` divider that you want
 You can also define html character like `&gt; or &lt;` or `&yen;` if you want :)
 
 
+Thank to
+=========================
+
 
 
 
