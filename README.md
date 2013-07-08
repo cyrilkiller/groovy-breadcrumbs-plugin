@@ -19,7 +19,7 @@ The breadcrumbs plugin is based on a MenuDefinitionService is provided by the ap
 
 Run `create-service MenuDefinitionService`
 
-In MenuDefinitionService create a metho call `loadMenuDefinition` 
+In MenuDefinitionService create an method call `loadMenuDefinition` 
 
 example 
 
@@ -39,7 +39,7 @@ class MenuDefinitionService  {
 		def menus = []
     
       menus << new MenuItem(name : "page-one", message:"page.one.demo", controller: "BreadCrumbsDemo", action: "pageOne")c
-    	MenuItem menuThreeTwo = new MenuItem(name : "page-two-", message:"page.twod.emo", controller: "BreadCrumbsDemo", action:"pageThreeTwo")
+    	MenuItem menuThreeTwo = new MenuItem(name : "page-two-", message:"page.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwo")
   		menuThreeTwo << new MenuItem(name : "page-two.one", message:"page.two.one.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoOne")
   		menuThreeTwo << new MenuItem(name : "page-two.two", message:"pagetwo.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoTwo")
   		menuThree << menuThreeTwo
@@ -51,6 +51,8 @@ class MenuDefinitionService  {
 You can define as many levels as you want !!!
 
 Just define the message in `messages.properties`
+
+like `page.two.demo=pageTwo`
 
 
 
