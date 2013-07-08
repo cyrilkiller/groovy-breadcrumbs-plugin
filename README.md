@@ -67,8 +67,14 @@ beans = {
 }
 ```
 
+Now the end for define the divider of breadcrumbs add grails configuration in config.groovy
 
+```goovy
+breadcrumbs.divider = "&gt;"
+```
 
+You can define all `> < / - ...` divider that you want
+You can also define html character like `&gt;`
 
 
 
