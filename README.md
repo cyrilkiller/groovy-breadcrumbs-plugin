@@ -67,7 +67,9 @@ beans = {
 }
 ```
 
-Now the end for define the divider of breadcrumbs add grails configuration in config.groovy
+Now the end for define the divider of breadcrumbs
+
+add grails configuration in config.groovy
 
 ```goovy
 breadcrumbs.divider = "&gt;"
