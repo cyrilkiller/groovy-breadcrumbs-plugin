@@ -47,6 +47,8 @@ class MenuDefinitionService  {
 
 You can define as many levels as you want !!!
 
+Just define the message in `messages.properties`
+
 
 
 
