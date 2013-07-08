@@ -24,6 +24,8 @@ In MenuDefinitionService create a metho call `loadMenuDefinition`
 example 
 
 `
+
+
 class MenuDefinitionService  {
 
   static transactional = false
