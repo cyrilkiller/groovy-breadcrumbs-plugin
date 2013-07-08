@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns='http://maven.apache.org/POM/4.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd'>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.grails.plugins</groupId>
+  <artifactId>breadcrumbs-plugins</artifactId>
+  <packaging>zip</packaging>
+  <version>0.1</version>
+  <name>Breadcrumbs Plugins Plugin</name>
+  <description>Provide a breadcrumbs based on a menu definition service.
+</description>
+  <url>http://grails.org/plugin/breadcrumbs-plugins</url>
+  <developers>
+    <developer>
+      <name>Cyrilkiller</name>
+    </developer>
+  </developers>
+  <dependencies>
+    <dependency>
+      <groupId>org.grails.plugins</groupId>
+      <artifactId>resources</artifactId>
+      <version>1.1.6</version>
+      <type>zip</type>
+      <scope>runtime</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>xml-apis</groupId>
+          <artifactId>xml-apis</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>xml-apis</groupId>
+          <artifactId>xmlParserAPIs</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>xerces</groupId>
+          <artifactId>xmlParserAPIs</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.grails.plugins</groupId>
+      <artifactId>lesscss-resources</artifactId>
+      <version>1.3.1</version>
+      <type>zip</type>
+      <scope>compile</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>xml-apis</groupId>
+          <artifactId>xml-apis</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>xml-apis</groupId>
+          <artifactId>xmlParserAPIs</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>xerces</groupId>
+          <artifactId>xmlParserAPIs</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,1 @@
+<g:link  action="index" controller="breadcrumbs">Go !!!</g:link>
