@@ -16,7 +16,7 @@ Using
 ========================
 
 The breadcrumbs plugin is based on a MenuDefinitionService is provided by the application. So les't go create the service
-...
+
 Run `create-service MenuDefinitionService`
 
 
