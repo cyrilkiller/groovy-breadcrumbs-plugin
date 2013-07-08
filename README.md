@@ -28,7 +28,7 @@ example
 
   static transactional = false
 	
-	static scope = 'session'
+	static scope = "session"
 	
 	static proxy = true
 	
