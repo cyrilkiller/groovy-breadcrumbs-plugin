@@ -54,7 +54,18 @@ Just define the message in `messages.properties`
 
 like `page.two.demo=pageTwo`
 
+Declare Service `MenuDefinitionService` as proxy in `resources.groovy`
 
+```groovy
+beans = {
+	...
+	menuDefinitionServiceProxy(org.springframework.aop.scope.ScopedProxyFactoryBean) {
+		targetBeanName = 'menuDefinitionService'
+		proxyTargetClass = true
+	}
+	...
+}
+```
 
 
 
