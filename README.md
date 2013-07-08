@@ -87,6 +87,60 @@ Adding the taglig in your layout
 <crumbs:breadcrumbs /> 
 ```
 
+for style
+=========================
+
+define a css for 
+
+```css
+.breadcrumb
+```
+
+for 
+
+```css
+.breadcrumb > li
+```
+
+and for active item
+
+```css
+.breadcrumb > li > .active
+```
+
+if you using less, let me offer you
+
+```less
+/**
+ * Tag breadcrumb
+ */
+@greyLightColor:			#f5f5f5;
+@colorPrincipalBreadcrumb: 	#999999;
+@colorBackgroundBreadcrumb: @greyLightColor;
+ 
+.breadcrumb {
+    padding: 8px 15px;
+    list-style: none;
+    background-color: @colorBackgroundBreadcrumb;
+    font: 10pt Arial regular;
+    
+	> li {
+    display: inline;
+    text-shadow: 0 1px 0 #000000;
+    > .divider {
+      padding: 0 5px;
+      color: @colorPrincipalBreadcrumb;
+    }
+	> a {
+	  color: @colorPrincipalBreadcrumb;
+	}
+  }
+  > .active {
+  	color: @colorPrincipalBreadcrumb;
+  }
+}
+```
+
 Thank to
 =========================
 
