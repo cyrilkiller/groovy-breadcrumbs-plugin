@@ -93,7 +93,7 @@ Adding the taglig in your layout
 Using BreadCrumbs Annotation
 ================================
 
-To redefine breadcrumb use `@` BreadCrumbs
+To redefine breadcrumb use ``@BreadCrumbs``
 
 The breadcrumb can be reset in three ways
 
