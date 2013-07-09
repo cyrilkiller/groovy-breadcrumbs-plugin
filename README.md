@@ -31,22 +31,24 @@ example
 
 class MenuDefinitionService  {
 
-  static transactional = false
+	static transactional = false
 
 	static scope = "session"
 
 	static proxy = true
 
 
-  def loadMenuDefinition() {
+	def loadMenuDefinition() {
 		def menus = []
-
-      menus << new MenuItem(name : "page-one", message:"page.one.demo", controller: "BreadCrumbsDemo", action: "pageOne")c
-    	MenuItem menuThreeTwo = new MenuItem(name : "page-two-", message:"page.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwo")
-  		menuThreeTwo << new MenuItem(name : "page-two.one", message:"page.two.one.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoOne")
-  		menuThreeTwo << new MenuItem(name : "page-two.two", message:"pagetwo.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoTwo")
-  		menuThree << menuThreeTwo
-  }
+	
+	     	menus << new MenuItem(name : "page-one", message:"page.one.demo", controller: "BreadCrumbsDemo", action: "pageOne")c
+	    	MenuItem menuThreeTwo = new MenuItem(name : "page-two-", message:"page.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwo")
+	  	menuThreeTwo << new MenuItem(name : "page-two.one", message:"page.two.one.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoOne")
+	  	menuThreeTwo << new MenuItem(name : "page-two.two", message:"pagetwo.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoTwo")
+	 	menuThree << menuThreeTwo
+	  
+	 	menus
+	}
 }
 
 ```
@@ -86,6 +88,45 @@ Adding the taglig in your layout
 
 ```gsp
 <crumbs:breadcrumbs />
+```
+
+Using BreadCrumbs Annotation
+================================
+
+To redefine breadcrumb use `@` BreadCrumbs
+
+The breadcrumb can be reset in three ways
+
+* static
+* session
+* request
+
+Example static scope
+```groovy
+@ BreadCrumbs (scope = BreadCrumbsScopeEnum.STATIC, actionName = "actionName" ControllerName = "ControllerName")
+controllerMethod def () {
+  ....
+}
+```
+
+Example request scope
+```groovy
+@ BreadCrumbs (scope = BreadCrumbsScopeEnum.REQUEST, actionName = "actionName" ControllerName = "ControllerName")
+controllerMethod def () {
+  ....
+}
+```
+
+Example with session scope
+```groovy
+@ BreadCrumbs (scope = BreadCrumbsScopeEnum.REQUEST, actionName = "actionName" ControllerName = "ControllerName")
+controllerMethod def () {
+
+	breadCrumbsService.pushActionInSession ("pageThreeTwoTwo")
+	and / or
+	breadCrumbsService.pushControllerInSession ("pageThreeTwoTwo")
+ 	 ....
+}
 ```
 
 for style
