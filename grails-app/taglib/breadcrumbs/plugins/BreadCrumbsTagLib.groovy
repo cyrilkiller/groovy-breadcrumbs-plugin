@@ -1,4 +1,4 @@
-package breadcrumbs.pugins
+package breadcrumbs.plugins
 
 /**
  * Breadcrumbs TagLib
