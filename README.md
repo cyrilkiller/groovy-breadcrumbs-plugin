@@ -145,7 +145,7 @@ if you using less, let me offer you
 Thank to
 =========================
 
-[laurent guerin ](https://github.com/lguerin?source=cc) (my master :))
+[laurent guerin ](https://github.com/lguerin?source=cc)
  
 
 
