@@ -35,47 +35,41 @@ class BreadCrumbsFilters {
 				}
 			}
 			after = { Map model ->
-				if(request.xhr){
-					return
-				}
-
-				BreadCrumbs bm
-				/* Retrieve whether target method is annoted */
-				if(controllerName != null && actionName != null){
-					Class clazz = breadCrumbsServiceProxy.retrievesArtifact("Controller", controllerName).clazz
-					if(!clazz != null){
-						return
+				if(!request.xhr){
+				
+					BreadCrumbs bm
+					/* Retrieve whether target method is annoted */
+					if(controllerName != null && actionName != null){
+						Class clazz = breadCrumbsServiceProxy.retrievesArtifact("Controller", controllerName).clazz
+						Method m
+						try{
+							m = clazz.getMethod(actionName, null)
+						}catch(NoSuchMethodException e){/* No method !!! Dynamic Scaffolding ... ??? */}
+	
+						if(m != null && m.isAnnotationPresent(BreadCrumbs)){
+							bm = m.getAnnotation(BreadCrumbs)
+							if(breadCrumbsServiceProxy.validate(bm)){
+								//delete breadcrumbs
+								session["breadcrumbs"].path = null
+			
+								String ctrl = controllerName
+								String act = actionName
+			
+								/* find params from scope */
+								def parameters = breadCrumbsServiceProxy.findOverrideParams(bm)
+			
+								if(parameters["actionName"]){
+									act = parameters["actionName"]
+								}
+			
+								if(parameters["controllerName"]){
+									ctrl = parameters["controllerName"]
+								}
+			
+								buildBreadCrumbs(ctrl, act, params, session)
+							}
+						}
 					}
-
-					Method m
-					try{
-						m = clazz.getMethod(actionName, null)
-					}catch(NoSuchMethodException e){/* No method !!! Dynamic Scaffolding ... ??? */}
-
-					if(!m || !m.isAnnotationPresent(BreadCrumbs)){
-						return
-					}
-
-					bm = m.getAnnotation(BreadCrumbs)
-					if(breadCrumbsServiceProxy.validate(bm))
-					//delete breadcrumbs
-					session["breadcrumbs"].path = null
-
-					String ctrl = controllerName
-					String act = actionName
-
-					/* find params from scope */
-					def parameters = breadCrumbsServiceProxy.findOverrideParams(bm)
-
-					if(parameters["actionName"]){
-						act = parameters["actionName"]
-					}
-
-					if(parameters["controllerName"]){
-						ctrl = parameters["controllerName"]
-					}
-
-					buildBreadCrumbs(ctrl, act, params, session)
 				}
 			}
 		}
