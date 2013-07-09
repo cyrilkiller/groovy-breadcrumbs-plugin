@@ -103,7 +103,7 @@ The breadcrumb can be reset in three ways
 
 Example static scope
 ```groovy
-@ BreadCrumbs (scope = BreadCrumbsScopeEnum.STATIC, actionName = "actionName" ControllerName = "ControllerName")
+@ BreadCrumbs (scope = BreadCrumbsScopeEnum.STATIC, actionName = "actionName", ControllerName = "ControllerName")
 controllerMethod def () {
   ....
 }
@@ -111,7 +111,7 @@ controllerMethod def () {
 
 Example request scope
 ```groovy
-@ BreadCrumbs (scope = BreadCrumbsScopeEnum.REQUEST, actionName = "actionName" ControllerName = "ControllerName")
+@ BreadCrumbs (scope = BreadCrumbsScopeEnum.REQUEST, actionName = "actionName", ControllerName = "ControllerName")
 controllerMethod def () {
   ....
 }
@@ -119,12 +119,12 @@ controllerMethod def () {
 
 Example with session scope
 ```groovy
-@ BreadCrumbs (scope = BreadCrumbsScopeEnum.REQUEST, actionName = "actionName" ControllerName = "ControllerName")
+@ BreadCrumbs (scope = BreadCrumbsScopeEnum.SESSION)
 controllerMethod def () {
 
-	breadCrumbsService.pushActionInSession ("pageThreeTwoTwo")
+	breadCrumbsService.pushActionInSession ("actionName")
 	and / or
-	breadCrumbsService.pushControllerInSession ("pageThreeTwoTwo")
+	breadCrumbsService.pushControllerInSession ("actionName")
  	 ....
 }
 ```
