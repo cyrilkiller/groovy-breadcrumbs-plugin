@@ -18,13 +18,13 @@ in waiting [fork me](https://github.com/cyrilkiller/groovy-breadcrumbs-plugin/fo
 Using
 ========================
 
-The breadcrumbs plugin is based on a MenuDefinitionService is provided by the application. So les't go create the service
+The breadcrumbs plugin is based on a MenuDefinitionService is provided by the application. So lets go create the service
 
 Run `create-service MenuDefinitionService`
 
-In MenuDefinitionService create an method call `loadMenuDefinition` 
+In MenuDefinitionService create an method call `loadMenuDefinition`
 
-example 
+example
 
 
 ```groovy
@@ -32,21 +32,21 @@ example
 class MenuDefinitionService  {
 
   static transactional = false
-	
+
 	static scope = "session"
-	
+
 	static proxy = true
-	
-	
+
+
   def loadMenuDefinition() {
 		def menus = []
-    
+
       menus << new MenuItem(name : "page-one", message:"page.one.demo", controller: "BreadCrumbsDemo", action: "pageOne")c
     	MenuItem menuThreeTwo = new MenuItem(name : "page-two-", message:"page.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwo")
   		menuThreeTwo << new MenuItem(name : "page-two.one", message:"page.two.one.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoOne")
   		menuThreeTwo << new MenuItem(name : "page-two.two", message:"pagetwo.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoTwo")
   		menuThree << menuThreeTwo
-  }   
+  }
 }
 
 ```
@@ -85,19 +85,19 @@ You can also define html character like `&gt; or &lt;` or `&yen;` if you want :)
 Adding the taglig in your layout
 
 ```gsp
-<crumbs:breadcrumbs /> 
+<crumbs:breadcrumbs />
 ```
 
 for style
 =========================
 
-define a css for 
+define a css for
 
 ```css
 .breadcrumb
 ```
 
-for 
+for
 
 ```css
 .breadcrumb > li
@@ -118,13 +118,13 @@ if you using less, let me offer you
 @greyLightColor:			#f5f5f5;
 @colorPrincipalBreadcrumb: 	#999999;
 @colorBackgroundBreadcrumb: @greyLightColor;
- 
+
 .breadcrumb {
     padding: 8px 15px;
     list-style: none;
     background-color: @colorBackgroundBreadcrumb;
     font: 10pt Arial regular;
-    
+
 	> li {
     display: inline;
     text-shadow: 0 1px 0 #000000;
@@ -146,6 +146,3 @@ Thank to
 =========================
 
 [laurent guerin ](https://github.com/lguerin?source=cc)
- 
-
-
