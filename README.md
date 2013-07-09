@@ -84,7 +84,7 @@ You can define all `> < / - ...` divider that you want
 
 You can also define html character like `&gt; or &lt;` or `&yen;` if you want :)
 
-Adding the taglig in your layout
+Adding the taglib in your layout
 
 ```gsp
 <crumbs:breadcrumbs />
@@ -101,30 +101,30 @@ The breadcrumb can be reset in three ways
 * session
 * request
 
-Example static scope
+Example with static scope
 ```groovy
-@ BreadCrumbs (scope = BreadCrumbsScopeEnum.STATIC, actionName = "actionName", ControllerName = "ControllerName")
-controllerMethod def () {
+@BreadCrumbs (scope = BreadCrumbsScopeEnum.STATIC, actionName = "actionName", ControllerName = "ControllerName")
+def controllerMethod() {
   ....
 }
 ```
 
-Example request scope
+Example with request scope
 ```groovy
-@ BreadCrumbs (scope = BreadCrumbsScopeEnum.REQUEST, actionName = "actionName", ControllerName = "ControllerName")
-controllerMethod def () {
+@BreadCrumbs (scope = BreadCrumbsScopeEnum.REQUEST, actionName = "actionName", ControllerName = "ControllerName")
+def controllerMethod() {
   ....
 }
 ```
 
 Example with session scope
 ```groovy
-@ BreadCrumbs (scope = BreadCrumbsScopeEnum.SESSION)
-controllerMethod def () {
+@BreadCrumbs (scope = BreadCrumbsScopeEnum.SESSION)
+def controllerMethod() {
 
 	breadCrumbsService.pushActionInSession ("actionName")
 	and / or
-	breadCrumbsService.pushControllerInSession ("actionName")
+	breadCrumbsService.pushControllerInSession ("controllerName")
  	 ....
 }
 ```
