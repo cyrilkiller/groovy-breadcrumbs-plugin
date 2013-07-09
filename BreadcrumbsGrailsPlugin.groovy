@@ -19,9 +19,9 @@ class BreadcrumbsGrailsPlugin {
 
 	def documentation = "http://grails.org/plugin/breadcrumbs-plugins"
 
-//	def license = "APACHE"
-//	def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
-//	def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
+	def license = 'APACHE'
+	def issueManagement = [system: 'GITHUB', url: 'https://github.com/cyrilkiller/groovy-breadcrumbs-plugin/issues']
+	def scm = [url: 'https://github.com/cyrilkiller/groovy-breadcrumbs-plugin']
 
 	def doWithSpring = {
 		breadCrumbsServiceProxy(ScopedProxyFactoryBean) {
