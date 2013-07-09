@@ -1,8 +1,6 @@
 package breadcrumbs.plugins.pages
 
-import geb.Module
 import geb.Page
-import groovy.lang.MetaClass;
 
 class DemoPage extends Page {
 
