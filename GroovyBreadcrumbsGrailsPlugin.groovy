@@ -17,7 +17,7 @@ class GroovyBreadcrumbsGrailsPlugin {
 	def authorEmail = ""
 	def description = 'Provide a breadcrumbs based on a menu definition service'
 
-	def documentation = "http://grails.org/plugin/breadcrumbs-plugins"
+	def documentation = "http://grails.org/plugin/groovy-breadcrumbs-plugin"
 
 	def license = 'APACHE'
 	def issueManagement = [system: 'GITHUB', url: 'https://github.com/cyrilkiller/groovy-breadcrumbs-plugin/issues']
