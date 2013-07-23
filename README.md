@@ -10,8 +10,9 @@ Very flexible and easy to implement.
 Install
 ========================
 
-`compile ":groovy-breadcrumbs-plugin:1.0"`
-
+```groovy
+compile ":groovy-breadcrumbs-plugin:1.0"
+```
 
 Using
 ========================
