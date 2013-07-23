@@ -19,6 +19,6 @@ class BreadCrumbsTagLib {
 	def breadcrumbs = {attrs ->
 		def breadcrumbs  = breadCrumbsServiceProxy.getAndDestroyBreadCrumbsPath()
 		def divider = grailsApplication.config.breadcrumbs.divider
-		out << render(plugin: 'breadcrumbs-plugins', template: "/tpl/breadcrumbs", model: [breadcrumbs: breadcrumbs, divider: divider])
+		out << render(plugin: 'groovy-breadcrumbs-plugin', template: "/tpl/breadcrumbs", model: [breadcrumbs: breadcrumbs, divider: divider])
 	}
 }
