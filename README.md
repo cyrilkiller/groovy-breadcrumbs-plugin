@@ -11,7 +11,7 @@ Install
 ========================
 
 ```groovy
-compile ":groovy-breadcrumbs-plugin:1.0"
+compile ":groovy-breadcrumbs-plugin:1.0.1"
 ```
 
 Using
