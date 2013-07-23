@@ -10,9 +10,7 @@ Very flexible and easy to implement.
 Install
 ========================
 
-Pending on [breadcrumbs-plugin](http://grails.org/plugins/pending/133#)
-
-in waiting [fork me](https://github.com/cyrilkiller/groovy-breadcrumbs-plugin/fork)
+`compile ":groovy-breadcrumbs-plugin:1.0"`
 
 
 Using
