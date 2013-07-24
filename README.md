@@ -21,7 +21,7 @@ The breadcrumbs plugin is based on a MenuDefinitionService is provided by the ap
 
 Run `create-service MenuDefinitionService`
 
-In MenuDefinitionService create an method call `loadMenuDefinition`
+In MenuDefinitionService create an method called `loadMenuDefinition`
 
 example
 
