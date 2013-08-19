@@ -21,7 +21,7 @@ The breadcrumbs plugin is based on a MenuDefinitionService is provided by the ap
 
 Run `create-service MenuDefinitionService`
 
-In MenuDefinitionService create an method call `loadMenuDefinition`
+In MenuDefinitionService create an method called `loadMenuDefinition`
 
 example
 
@@ -40,11 +40,11 @@ class MenuDefinitionService  {
 	def loadMenuDefinition() {
 		def menus = []
 	
-	     	menus << new MenuItem(name : "page-one", message:"page.one.demo", controller: "BreadCrumbsDemo", action: "pageOne")c
-	    	MenuItem menuThreeTwo = new MenuItem(name : "page-two-", message:"page.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwo")
+	    menus << new MenuItem(name : "page-one", message:"page.one.demo", controller: "BreadCrumbsDemo", action: "pageOne")c
+	    MenuItem menuThreeTwo = new MenuItem(name : "page-two-", message:"page.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwo")
 	  	menuThreeTwo << new MenuItem(name : "page-two.one", message:"page.two.one.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoOne")
 	  	menuThreeTwo << new MenuItem(name : "page-two.two", message:"pagetwo.two.demo", controller: "BreadCrumbsDemo", action:"pageThreeTwoTwo")
-	 	menuThree << menuThreeTwo
+	 	menus << menuThreeTwo
 	  
 	 	menus
 	}
