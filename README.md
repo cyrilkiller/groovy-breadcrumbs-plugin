@@ -128,6 +128,52 @@ def controllerMethod() {
 }
 ```
 
+activate clickable Mode
+=========================
+```groovy
+breadcrumbs.enable.clickable=true
+```
+
+Configure Home Item
+=========================
+```groovy
+breadcrumbs.enable.home=true
+```
+
+Two mode are possible
+
+mode image 
+-------------------------
+```groovy
+breadcrumbs.home.type="image"
+```
+mode text
+-------------------------
+```groovy
+breadcrumbs.home.type="message"
+```
+
+Add a ```getHomeItem()```
+
+Example for image mode
+
+```groovy
+def getHomeItem(){
+	def message = "breadcrumbs/menu_home.png"
+	def home  = new MenuItem(name:"page-home", message: message);
+	home
+}
+```
+
+Or for message mode
+
+```groovy
+def getHomeItem(){
+	def home  = new MenuItem(name:"page-home", message: "message key");
+	home
+}
+```
+
 for style
 =========================
 
