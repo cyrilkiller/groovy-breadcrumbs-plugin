@@ -36,5 +36,6 @@ grails.project.dependency.resolution = {
 
 	   runtime ":resources:1.2"
 	   compile ":lesscss-resources:1.3.1"
+	   compile ":remote-control:1.4"
 	}
 }

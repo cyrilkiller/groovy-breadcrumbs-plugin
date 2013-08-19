@@ -1,8 +1,11 @@
 grails.config.defaults.locations = [
 	BreadcrumbsPluginsResources
 ]
-/* breadcrumbs divider */
+/* breadcrumbs configuration */
+breadcrumbs.enable.clickable=false
+breadcrumbs.enable.home=true
 breadcrumbs.divider = "&gt;"
+breadcrumbs.home.type="image"
 
 log4j = {
 	error 'org.codehaus.groovy.grails',

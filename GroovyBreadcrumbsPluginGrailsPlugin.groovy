@@ -1,7 +1,7 @@
 import org.springframework.aop.scope.ScopedProxyFactoryBean
 
 class GroovyBreadcrumbsPluginGrailsPlugin {
-	def version = "1.0.1"
+	def version = "1.0.2"
 	def grailsVersion = "2.0 > *"
 	def pluginExcludes = [
 		"grails-app/views/error.gsp",
@@ -9,7 +9,8 @@ class GroovyBreadcrumbsPluginGrailsPlugin {
 		"grails-app/views/breadcrumbsDemo/**",
 		"grails-app/controllers/breadcrumbs/plugins/**",
 		"grails-app/services/breadcrumbs/plugins/**",
-		"grails-app/i18n/**"
+		"grails-app/i18n/**",
+		"web-app/lib/breadcrumbs/less/breadcrumbs.less"
 	]
 
 	def title = "Groovy Breadcrumbs Plugin for grails"

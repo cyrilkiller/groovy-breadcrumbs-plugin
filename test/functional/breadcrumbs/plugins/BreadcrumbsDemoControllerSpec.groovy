@@ -1,21 +1,27 @@
 package breadcrumbs.plugins
 
 import geb.spock.GebReportingSpec
+import grails.plugin.remotecontrol.RemoteControl
 import spock.lang.Stepwise
 import breadcrumbs.plugins.pages.DemoPage
 
 @Stepwise
 class BreadcrumbsDemoControllerSpec  extends GebReportingSpec {
 
-	def "retrieve breadcrumbs"() {
-		when: "Go home page"
-		to DemoPage
+	def remote = new RemoteControl()
 
-		then: "Breadcrumbs home"
-		assert active.text() == "Home"
-		assert li.size() == 1
+	def "retrieve breadcrumbs without home item "() {
+		setup:
+		remote.exec{ app.config.breadcrumbs.enable.home=false}
+//		when: "Go home page"
+//		to DemoPage
+
+//		then: "Breadcrumbs home"
+//		assert active.text() == "Home"
+//		assert li.size() == 1
 
 		when : "Click on subsub item "
+		to DemoPage
 		linkSubSubItem.click()
 
 		then : "breadcrumbs contains three parts"
@@ -41,4 +47,18 @@ class BreadcrumbsDemoControllerSpec  extends GebReportingSpec {
 		assert li[1].text().startsWith("Create Something")
 
 	}
+	
+	def "retrieve breadcrumbs with home item "() {
+		setup:
+		remote.exec{ app.config.breadcrumbs.enable.home=true}
+
+		when : "Click on subsub item "
+		to DemoPage
+		linkSubSubItem.click()
+
+		then : "breadcrumbs contains three parts"
+		assert li.size() == 4
+		
+	}
+
 }

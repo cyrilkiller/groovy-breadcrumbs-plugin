@@ -31,7 +31,13 @@ class BreadCrumbsFilters {
 			before = {
 				//Exclusion des requete Ajax
 				if(!request.xhr){
+					//Build the breadcrumbs
 					buildBreadCrumbs(controllerName, actionName, params, session)
+					//Retrieve if home link must be display
+					if(grailsApplication.config.breadcrumbs.enable.home && session["breadcrumbs"].homeitem == null){						
+						def homeItem = menuDefinitionServiceProxy.getHomeItem();
+						session["breadcrumbs"].home = homeItem
+					}
 				}
 			}
 			after = { Map model ->
@@ -103,10 +109,10 @@ class BreadCrumbsFilters {
 				throw new BreadCrumbsException("No MenuDefinitionService is provided or not implement loadMenuDefinition method")
 			}
 
-			//Home Page
-			if(path == null || path.size() == 0 ){
-				path << messageSource.getMessage('breadcrumbs.home.label', null, LCH.getLocale())
-			}
+//			//Home Page
+//			if(path == null || path.size() == 0 ){
+//				path << messageSource.getMessage('breadcrumbs.home.label', null, LCH.getLocale())
+//			}
 
 			sess["breadcrumbs"].path = path
 		}

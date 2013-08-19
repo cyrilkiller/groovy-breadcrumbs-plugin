@@ -52,6 +52,11 @@ class BreadCrumbsService {
 		retrievesFromSession("path", "breadcrumbs", true)
 	}
 
+	
+	def getHomeItem(){
+		retrievesFromSession("home", "breadcrumbs", false)
+	}
+	
 	/**
 	 * Retrieves params from breadcrumbs scope
 	 * @param breadCrumbs
@@ -252,13 +257,13 @@ class BreadCrumbsService {
 				menus.each(){
 					if((it.controller != null && StringUtils.lowerCase(it.controller).equals(_controller))
 						&& it.action != null && StringUtils.lowerCase(it.action).equals(_action)){
-						path << it.message
+						path << it
 						active = it
 					}else{
 						if(active == null && it.subMenuItems != null && it.subMenuItems.size() > 0){
 							MenuItem m = owner.call(it.subMenuItems)
 							if( m != null){
-								path << it.message
+								path << it
 								active = it
 							}
 						}
