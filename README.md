@@ -17,7 +17,7 @@ compile ":groovy-breadcrumbs-plugin:1.0.1"
 Using
 ========================
 
-The breadcrumbs plugin is based on a MenuDefinitionService is provided by the application. So lets go create the service
+The breadcrumbs plugin is based on a MenuDefinitionService is provided by the application. So let's go create the service
 
 Run `create-service MenuDefinitionService`
 
