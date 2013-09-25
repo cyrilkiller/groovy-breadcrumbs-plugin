@@ -94,7 +94,7 @@ Using BreadCrumbs Annotation
 
 To redefine breadcrumb use ``@BreadCrumbs``
 
-The breadcrumb can be reset in three ways
+The breadcrumb can be reset by three ways
 
 * static
 * session
