@@ -29,7 +29,7 @@ class BreadCrumbsTagLib {
 
 		//Switch to clickable template if set in config
 		if(grailsApplication.config.breadcrumbs.enable.clickable){
-			template "/tpl/clickable/breadcrumbs"
+			template = "/tpl/clickable/breadcrumbs"
 		}
 		out << render(plugin: 'groovy-breadcrumbs-plugin', template: template, model: [breadcrumbs: breadcrumbs, divider: divider, home : displayHome, type: homeType])
 	}
