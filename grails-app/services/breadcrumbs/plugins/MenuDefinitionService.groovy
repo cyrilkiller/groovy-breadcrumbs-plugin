@@ -34,7 +34,7 @@ class MenuDefinitionService  {
 	
 	//@Caching()
 	def getHomeItem(){
-		def message = "breadcrumbs/ic_menu_home.png"
+		def message = "breadcrumbs/menu_home.png"
 		def home  = new MenuItem(name:"page-home", message: message);
 		home
 	}

@@ -1,8 +1,5 @@
-grails.config.defaults.locations = [
-	BreadcrumbsPluginsResources
-]
 /* breadcrumbs configuration */
-breadcrumbs.enable.clickable=false
+breadcrumbs.enable.clickable=true
 breadcrumbs.enable.home=true
 breadcrumbs.divider = "&gt;"
 breadcrumbs.home.type="image"

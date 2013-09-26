@@ -9,8 +9,7 @@ class GroovyBreadcrumbsPluginGrailsPlugin {
 		"grails-app/views/breadcrumbsDemo/**",
 		"grails-app/controllers/breadcrumbs/plugins/**",
 		"grails-app/services/breadcrumbs/plugins/**",
-		"grails-app/i18n/**",
-		"web-app/lib/breadcrumbs/less/breadcrumbs.less"
+		"grails-app/i18n/**"
 	]
 
 	def title = "Groovy Breadcrumbs Plugin for grails"

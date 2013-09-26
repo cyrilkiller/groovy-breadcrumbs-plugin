@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <head>
 	<title>BreadCrumbs-Plugins</title>
-	
-	<r:require modules="breadcrumbs" />
-	<r:layoutResources />
 </head>
 <body>
+	<style>
+		.breadcrumb li{
+			display : inline;
+		}
+	</style>
 	<p>${welcome}</p>
 	<hr />
 	<p>You are on page : ${page}</p>
