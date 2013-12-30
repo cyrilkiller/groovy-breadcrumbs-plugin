@@ -21,7 +21,7 @@ The breadcrumbs plugin is based on a MenuDefinitionService is provided by the ap
 
 Run `create-service MenuDefinitionService`
 
-In MenuDefinitionService create an method called `loadMenuDefinition`
+In MenuDefinitionService create a method called `loadMenuDefinition`
 
 example
 
@@ -52,7 +52,7 @@ class MenuDefinitionService  {
 
 ```
 
-You can define as many levels as you want !!!
+You can define as many levels that you want !!!
 
 Just define the message in `messages.properties`
 
@@ -71,7 +71,7 @@ beans = {
 }
 ```
 
-Now the end for define the divider of breadcrumbs
+Now the end, for define the divider of breadcrumbs
 
 add grails configuration in config.groovy
 
