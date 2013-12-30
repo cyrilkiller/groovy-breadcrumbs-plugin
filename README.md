@@ -153,7 +153,7 @@ mode text
 breadcrumbs.home.type="message"
 ```
 
-Add a ```getHomeItem()```
+Add a ```getHomeItem()``` in ```MenuDefinitionService```
 
 Example for image mode
 
